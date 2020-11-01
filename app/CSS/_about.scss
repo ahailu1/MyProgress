@@ -1,0 +1,66 @@
+.about{
+    &__title{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #11152c;
+    }
+    &__paragraph{
+
+    }
+    &__icon{
+        color: #11152c;
+
+    &:hover{
+        color: #11152c;
+
+    }}
+}
+
+.section__about{
+    background-attachment: fixed;
+    background-color: whitesmoke;
+    height: 45vh;
+    display: flex;
+justify-content: space-between;
+padding: 3rem;
+&__card{
+    display: flex;
+}
+&__container{
+
+&__image{
+    height: 100%;
+    padding: 2rem 2rem 5rem 2rem;
+
+}
+&__description{
+    padding:2rem 0rem 2rem 5rem;
+    width: 40%;
+}
+&__personal{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+}
+}
+&__image{
+    padding: 0 10rem 10rem 0;
+    animation: imageanimation 15s infinite ease-in-out;
+    height: 25rem;
+    opacity: 0.55;
+}
+@keyframes imageanimation{
+0%{
+    opacity: 0.5;
+}
+50%{
+    opacity: 0.25;
+}
+100%{
+    opacity: 0.5;
+}
+    
+}
+}

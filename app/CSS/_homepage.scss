@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.section{
+
+    &__homepage{
+        background-color: whitesmoke;
+        position: relative;
+        z-index: 5;
+        height: 120vh;
+        display: flex;
+        justify-content: space-between;
+    &::after{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        content: "";
+        background-attachment: fixed;
+        animation: mybackground 5s linear infinite;
+        background-image: linear-gradient(45deg,#11152c,#1d1d20,#1d1d20, #11152c);
+        background-size: 100% 1100%;
+        clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+
+    }}
+    @keyframes mybackground{
+        0%{
+            background-position: 0% 0%;
+        }
+        50%{
+        }
+        100%{
+            background-position: 0% 100%;
+
+        }
+    } 
+}
+.section__homepage{
+    display: flex;
+    align-items: center;
+    &__first{
+        margin: 0 0 10rem 5rem;
+        display: flex;
+        flex-direction: column-reverse;
+    
+    & h3{
+        color: whitesmoke;
+        letter-spacing: 2px;
+    }
+    & p {
+        padding: 0.25rem;
+        color: white;
+    }
+    }
+    &__icon__container{
+        display: flex;
+        justify-content: flex-start;
+        padding: 1.5rem 2rem 0 0;
+    }
+}
+
+.custom__colour{
+    
+    font-size: 1.5rem;
+    color: #ffffd1;
+}
+
+.homepage{
+&__icon{
+    padding: 1rem 1.25rem 1rem 0;
+    color: #ffffd1;
+    font-size: 2.25rem;
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 1s infinite linear;
+    -o-animation: bounce 1s infinite linear;
+    -webkit-animation: bounce 1s infinite linear;
+    animation: bounce 1s infinite linear;
+
+&:hover{
+    color: white;
+    padding: 1rem 1.5rem 1rem 0;
+    font-size: 2.5rem;
+    transition: all ease-in-out 0.15s;
+}
+}
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+}
