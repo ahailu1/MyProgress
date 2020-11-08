@@ -7,11 +7,10 @@
     <link rel = "stylesheet" href = "./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c1d12be143.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
-    <nav class="mynav">
-        <ul class = "mynav__list">
+    <nav class="mynav toggled">
+        <ul class = "mynav__list toggled">
             <li class = "mynav__list__item"><a href = "#">Home</a></li>
             <li><a href = "#">  About</li></a>
             <li><a href = "#"> Technologies</a></li>
@@ -30,12 +29,13 @@
     </div>
     <div>
     <h3>Hello, I'M <span class="custom__colour">ALEXANDER HAILU</span> </h3>
-    <p>And I am currently looking for a <span class="custom__colour">web-development position</span> </p>
-    <p>Feel free to scroll through to see a list of my projects</p>
+    <p>And I am currently looking for a position<span class="custom__colour"> in Web-Development</span> </p>
+    <p>I enjoy both front-end and back-end, hence my interest in full-stack develpoment, but am open to positions in either domain</p>
+    <p>Feel free to scroll through to see a list of my projects and get a detailed overview about myself</p>
 </div>
 </div>
-<div>
-    <img src = "./app/images/sketchmyself-removebg-preview.png" class="section__about__image"/>
+<div class = "section__homepage__image__container">
+    <img src = "./app/images/sketchmyself-removebg-preview.png" class="section__homepage__image"/>
 
 </div>
 
@@ -44,49 +44,131 @@
 
 </section>
 <section class = "section__about">
-<div class="section__about__container__description">
-<h1>About Me</h1>
-<p> Upon Graduation, I took various positions within the field of sales, despite my passion for Web-Development and programming.Most of my free time was spent working on mini web-development projects and trying to hone my skills so that I could eventually bring my ideas into action.I'd often ask myself why I was spending time in a field I disliked,and also took time away from doing things that I truly have a passion for. Since then I've been studying rigorously in hopes of securing a position as a web developer </p>
+<div class="section__about__container__description toggled">
+<div class = "technology__language__wrapper"></div>
+    <h1 class = "technology__header">Technologies</h1>
+
+    <div class = "technology__language__container">
+        <p class = "technology__name html">HTML/CSS</p>
+        <div class = "technology__language html">
+            <div class = "technology__language__relative html">
+                <div class = "technology__language__blur html"></div>
+            </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
+
+    <div class = "technology__language__container">
+        <p class = "technology__name">JavaScript</p>
+        <div class = "technology__language javascript">
+            <div class = "technology__language__relative javascript">
+                <div class = "technology__language__blur"></div>
+            </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
+    <div class = "technology__language__container">
+        <p class = "technology__name">ReactJs</p>
+        <div class = "technology__language">
+            <div class = "technology__language__relative reactjs">
+                <div class = "technology__language__blur"></div>
+            </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
+    <div class = "technology__language__container">
+        <p class = "technology__name">NodeJs</p>
+        <div class = "technology__language">
+            <div class = "technology__language__relative nodejs">
+                <span class = "technology__language__blur"></span>
+            </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
+    <div class = "technology__language__container">
+        <p class = "technology__name">PostgreSQL</p>
+
+        <div class = "technology__language">
+            
+            <div class = "technology__language__relative postgresql">
+                <div class = "technology__language__blur"></div>
+            </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
+    <div class = "technology__language__container">
+        <p class = "technology__name">C#</p>
+        <div class = "technology__language">
+            <span class = "technology__language__relative"></span>
+            <span class = "technology__language__blur"></span>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+                </ul>
+        </div>
+    </div>
 </div>
 
 <div class = "section__about__container__personal">
-    <div class = "section__about__card">
+        <div class = "about__container toggled">
+            <h1>About Me</h1>
+            <p> Upon Graduation, I took various positions within the field of sales, despite my passion for Web-Development and programming.Most of my free time was spent working on mini web-development projects and trying to hone my skills so that I could eventually bring my ideas into action.I'd often ask myself why I was spending time in a field I disliked,and also took time away from doing things that I truly have a passion for. Since then I've been studying rigorously in hopes of securing a position as a web developer </p>    
+        <span class = "about__container__span"></span>
+        </div>
+    <div class = "section__about__card toggled">
+        <span class = "section__about__card__span"></span>
         <div>        
                 <i class="fas fa-university homepage__icon about__icon"></i>
         </div>
-<div>   
-    <p class = "about__title">Education</p>
-    <p class = "paragraph">Ryerson University BComm-- Business Technology Management</p>
-</div>
-        </div>
-        <div class = "section__about__card">
-            <div>        
-                <i class="fas fa-laptop-code homepage__icon about__icon"></i>
+            <div class = "section__about__card__information toggled">   
+                <p class = "about__title">Education</p>
+                <p class = "about__paragraph">Ryerson University BComm-- Business Technology Management</p>
             </div>
-    <div>   
-        <p class = "about__title">Resume/Work Experience</p>
-        <p class = "paragraph">Ryerson University BComm-- Business Technology Management</p>
     </div>
-            </div>
-            <div class = "section__about__card">
-                <div>        
+
+        <div class = "section__about__card two">
+            <span class = "section__about__card__span"></span>
+            <div>        
                     <i class="fas fa-laptop-code homepage__icon about__icon"></i>
                 </div>
-        <div>   
-            <p class = "about__title">Technologies</p>
-            <p class = "paragraph">Ryerson University BComm-- Business Technology Management</p>
-        </div>
-                </div>
-                <div class = "section__about__card">
-                    <div>        
-                        <i class="fas fa-laptop-code homepage__icon about__icon"></i>
-                    </div>
-            <div>   
-                <p class = "about__title">Technologies</p>
-                <p class = "paragraph">Ryerson University BComm-- Business Technology Management</p>
+            <div class = "section__about__card__information">   
+            <p class = "about__title">Resume/Work Experience</p>
+            <button class = "project__button resume"><a href = "https://instachatter.com">View Resume  </a></button>
             </div>
-                    </div>
-
+        </div>
 
 </div>
 </section>
@@ -118,20 +200,11 @@
             </div>    
         </div>
         <div class = "project__image">
-
             <img src = "./app//images/instachattergif.gif" class = "project__image__gif"/>
-
         </div>
-   
 </div>
 </div>
 <div class="section__projects__allprojects second">
-
-    <div class = "section__projects__divider">
-    <span class = "project__header__divider second"></span>    
-    <i class="fas fa-cog projects"></i>
-    <span class = "project__header__divider second"></span>
-    </div>
 
     <div class="project__one almadina">
         <div class = "project__one__text almadina"> 
@@ -154,5 +227,69 @@
 </div>
 </div>
 </Section>
+<Section class = "section__contact">
+
+<div class = "section__contact__second">
+
+ 
+<div class = "section__contact__container__text">
+    <p class = "contact__header">Get In Touch</p>
+    <span class = "contact__icon__text">
+        Whether you want to provide feedback or reach out for employment purposes, feel free to contact me. 
+    </span>
+
+    <span class = "contact__icon__text"><i class="fas fa-phone contact__icon"></i>
+        647-901-6878
+    </span>
+    <span class = "contact__icon__text"><i class="fas fa-envelope contact__icon"></i>
+
+        alex.hailu@hotmail.com
+    </span>
+    <span class = "contact__icon__text"><i class="fas fa-map-marker-alt contact__icon"></i>
+        Toronto, Ontario M6P5A2
+    </span>
+</div>
+<div class = "section__contact__container__form">
+    <form action="https://formspree.io/f/mqkbgowj" method="POST" class = "myform" required>
+<input type="text" name="name" placeholder="FULL NAME" class = "myform__input name" required>
+<input type="email" name="_replyto" class = "myform__input email" placeholder="EMAIL">
+
+<textarea name="message" class = "myform__input message" placeholder="MESSAGE" required></textarea>
+<button type="submit" value="Send" class = "myform__button"> Send </button>
+</form>
+</div>
+
+
+</div>
+
+</Section>
+<Footer class = "section__footer">
+<div class = "section__footer__content">
+<div class = "footer__icon">
+    <i class="fab fa-linkedin-in homepage__icon"></i>
+    <i class="fab fa-github homepage__icon"></i>
+    <i class="fab fa-instagram homepage__icon"></i>
+    <i class="fab fa-facebook homepage__icon"></i>
+</div>
+<div class = "footer__about">This project was made with Javascript, (S)CSS, and HTML.<br/> No frameworks or libraries were used in its creation :);</div>
+<div class = "footer__links">
+    <p>Home</p>
+    <span class = "footer__divider">|</span>
+<p>About</p>
+<span class = "footer__divider">|</span>
+<p>Technology</p>
+<span class = "footer__divider">|</span>
+<p>Contact </p>
+
+</div>
+</div>
+<div class = "footer__copyright">
+<p>Designed by Alexander Hailu</p>
+<span>||</span>
+<p>copyright 2020</p>
+
+</div>
+</Footer>
+<script src = "./main.js"></script>
 </body>
 </html>

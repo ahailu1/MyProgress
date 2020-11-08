@@ -2,13 +2,8 @@
     background-color: #1d1d20;
     height: auto;
     background-attachment: fixed;
-    
-    &__divider{
-        padding: 4rem 0 4rem 0;
-        width:100%;
-        margin-bottom: 1rem;
-        display: flex;
-    }
+    background-image: url('./app/images/rippleback.png');
+ padding: 4rem 0 4rem 0;
 &__wrapper{
     display: flex;
     flex-direction: column;
@@ -24,7 +19,7 @@
     padding: 4rem 0 3rem 0;
 }
 &__allprojects{
-
+padding: 3rem 0 0 3rem;
 &.second{
     //border-top: solid white 2px;
     z-index: 1;
@@ -40,22 +35,30 @@
         display: flex;
         width: 100%;
         padding: 3rem 3rem 3rem 4rem;
+        position: relative;
+        z-index: 1;
         &__title{
             width: 100%;
             display: flex;
         }
     &__text{
+        position: relative;
         background-color: #ffffe3;
         display: flex;
         flex-direction: column;
         box-shadow: 0 0 4px 0 #141212;
         align-items: flex-start;
         justify-content: flex-start;
-        width: 50%;
-        padding:  4rem 0rem 0 2.5rem;
+        width: 40%;
+        height: 100%;
+        padding:  3rem 0rem 0 2rem;
         border-radius: 0.55rem;
+        z-index: 10;
         &.almadina{
-            width: 40%;
+            padding: 2rem 0 0 4rem;
+            width: 50%;
+            align-items: flex-start;
+            justify-content: center;
         }
 
 }
@@ -68,22 +71,36 @@
 }
 .project{
     &__image{
+        height: 80%;
+        position: absolute;
         display: flex;
         justify-content: flex-start;
-        width: 60%;
-        right: 0;
+        width: 45%;
+        left: 2%;
+        //left:3%;
+        z-index: 5;
+        padding:  3rem 0rem 0 2rem;
+        top:0;
+        left: 3%;
         transform: translate(-5rem, -5rem);
         align-items: flex-start;
+        transition: all ease-in-out 0.25s;
+        &.instachatter{
+            //transform: translate(-2rem, 0rem);
+            transition: all ease-in-out 1s;
+        }
         &__gif{
             box-shadow: 0 0 3px 0 #1d1d20;
             border-radius: 0.65rem;
-            width: 80%;
+            width: 100%;
+            height: 100%;
         }
         &__item{
         }
         &__two{
             transform: translate(-5rem, -5rem);
             width: 60%;
+            z-index: 20;
             display: flex;
             flex-direction: column;
         
@@ -96,44 +113,36 @@
 }
 }
     &__header{
-
         width: auto;
         line-height: 3.5rem;
         font-size: 2rem;
         color: #2b2b2b;
         font-weight: 700;
         text-align: left;
+        
         margin: 0 0.5rem 0 0;
         &__title{
-            font-size: 3rem;
+            font-size: 3.75rem;
             font-weight: 700;
             letter-spacing: 2px;
             padding: 0rem 0.75rem 0rem 0.75rem; 
         }
         &__line{
             display: flex;
-            border-top: solid #ffffe3 3px;
             height: 0;
             align-self: center;
-            flex-grow: 1;
+            flex-grow: 0.75;
+            border: solid #2b2b2b;
         }
         &__divider{
             display: flex;
-            border-top: solid #ffffe3 3px;
             height: 0;
             align-self: center;
             flex-grow: 1;
-
+            border: solid #ffffe3;
         }
-    &__sub{
-        width: 80%;
-        border-bottom: solid #1d1d20;
-        line-height: 3.5rem;
-        font-size: 1.25rem;
-        color: #2b2b2b;
-        text-align: start;
 
-    }}
+}
     &__description{
         text-align: start;
         width: 85%;
@@ -165,6 +174,15 @@
         z-index: 5;
         border-radius: 0.25rem;
         position: relative;
+        &.resume{
+            margin: 1.5rem 0 1.5rem 0;
+            box-shadow: none;
+            padding: 0.5rem;
+            height: 2rem;
+            font-size: 0.5rem;
+            width: auto;
+      }
+        
         &::after{
             border-radius: 0.25rem;
             position: absolute;
@@ -181,10 +199,11 @@
         }
     & a {
         text-decoration: none;
-        color: #4759ff;
+        color: #2b2b2b;
         font-size: 1rem;
    
 }
+
     &:hover::after{
         transition: all ease-in-out 0.35s;
         width: 100%;
@@ -194,23 +213,17 @@
         background-color: #1d1d20;
         opacity: 1;
     }
-    
+    &.resume:hover::after{
+        border: none;
+        box-shadow: 0 0 3px 0 gray;
+        background-color:#ffffd1 ;
+    }
     &:hover > a{
         z-index: 5;
         color: #ffffd1;
     }
-    
-
+    &.resume:hover > a {
+        color: #1d1d20;
+    }
 }
-}
-
-.fa-cog{
-&.projects{
-    z-index: 5;
-padding: 0 1rem 0 1rem;
-    display: flex;
-    right: 50%;
-    font-size: 5rem;
-}
-
 }

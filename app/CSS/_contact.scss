@@ -1,0 +1,112 @@
+.section__contact{
+    display: flex;
+    //padding: 4rem 0 4rem 0;
+    justify-content: center;
+    height: auto;
+
+
+&__second{
+        display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px 0 #6b6767;
+}
+}
+
+
+.section__contact{
+    background-color: whitesmoke;
+    &__container{
+
+        &__form{
+            padding: 5rem 4rem;
+            border-radius: 0 0.5rem 0.5rem 0rem;  
+            width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffd1;
+        }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-radius: 0.5rem 0 0 0.5rem;  
+        padding: 5rem 0 5rem 3rem;
+
+        width: 50%;
+        border: none;
+
+        position: relative;
+    &::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        border: none;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(93% 26%, 100% 18%, 100% 35%);
+        background-color: #ffffd1;
+
+    }}
+}
+}
+.myform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5rem;
+    justify-content: center;
+&__input{
+    //background-color: #1d1d20;
+padding: 0.5rem;
+width: 50%;
+border: solid black 1px;
+border-radius: 0.25rem;
+//border: solid white 2px;
+box-shadow: 0 0 3px 0 gray;
+margin: 0.5rem;
+color: black;
+font-weight: 700;
+background-color: #ffffd1;
+&:focus{
+    outline: none;
+    border: solid black 2px;
+}
+&.message{
+    height: 30%;
+}
+}
+&__button{margin: 0.5rem;
+background-color:  #1d1d20;
+border: none;
+border-radius: 0.35rem;
+color: whitesmoke;
+    align-self: flex-start;
+    height: 2rem;
+    width: 5rem;
+}
+}
+.contact{
+    &__icon{
+        padding: 0 1rem 0 0rem;
+    &__text{
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0rem 1rem 0 0;
+        padding: 0.75rem 0 0.5rem 0;
+
+    }
+}
+&__header{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+}

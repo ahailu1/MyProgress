@@ -1,0 +1,57 @@
+.section__footer{
+    background-color: #1d1d20;
+    display: flex;
+    flex-direction: column;
+&__content{
+    padding: 5rem 3rem 3rem 3rem;
+}
+}
+.footer{
+    &__divider{
+        padding: 0.5rem;
+        color: whitesmoke;
+        height: 40%;
+        display: flex;
+        align-items: baseline;
+
+    }
+    &__icon{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    & i {
+        padding: 0.5rem;
+        margin: 0rem 0.75rem 0 0.75rem;
+
+    }
+    }
+    &__copyright{
+        display: flex;
+        justify-content: center;
+        background-color: #37373d;
+        width: 100%;
+        padding: 0.5rem;
+    & p, span{
+        color: whitesmoke;
+        font-size: 0.85rem;
+    }
+    }
+    &__links{
+        align-items: center;
+        margin: 0.5rem;
+        display: flex;
+        justify-content: center;
+    & p{
+        font-size: 0.75rem;
+        color: whitesmoke;
+   
+    }    
+    }
+    &__about{
+        padding: 0.5rem 0 0.5rem 0;
+        color: white;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

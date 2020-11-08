@@ -1,38 +1,55 @@
 
 
 .mynav{
-    padding: 1.5rem;
     display: flex;
-    position: fixed;
     width: 100%;
     height: 0px;
     z-index: 25;
-    line-height: 1px;
-    border-top: solid white 2px;
+    border-bottom: solid  #ffffe3 2px;
+    position: fixed;
+    transition: all ease-in-out 0.5s;
+
+    &::after{
+        /*
+    top: 0;
+    left: 0;
+    content: "";
+    display: flex;
+    background-color: orange;
+*/
+}
     &.toggled{
-        
+        padding: 0rem;
+
+        background-color: #1d1d20;
+        border-top: none;
+        height: 4rem;
+        border-bottom: solid  #ffffe3 2px;
+        transition: all ease-in-out 0.5s;
     }
     &__list{
-        height: 0;
+        margin-top: 2rem;
     display: flex;
     list-style: none;
     width: 100%;
+    height: 0;
+    align-items: center;
     justify-content: flex-start;
+    border-bottom: none;
+    &.toggled{
+    }
 
-& ul{
-    border: solid red;
-}
     & li{
     padding: 0.5rem;
 
 }
 & a {    
+    margin-top: 2rem;
     color: white;
     text-decoration: none;
 &:hover{
     font-size: 1.2rem;
     transition: all 0.2s ease-in-out;
-    color: black;
 }}
     }
 }
