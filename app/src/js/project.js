@@ -11,7 +11,7 @@ var firstProjectTextHeight = projectText[0].getBoundingClientRect().height;
 
 
 
-if(firstProjectTextTop <= windowSize){
+if((firstProjectTextTop <= windowSize) && window.innerWidth > 968){
     let calcDistance = () => {
         let scroll = ((windowSize - firstProjectTextTop) / firstProjectTextHeight) * 0.45 * 100;
         scroll  = scroll > 45 ? 43 : scroll;
@@ -24,6 +24,7 @@ if(firstProjectTextTop <= windowSize){
     projectImage[0].classList.add('instachatter');
     projectImage[0].setAttribute('style', `left:${height[0]}%;z-index:${height[1]};`);
 } else {
+    projectImage[0].setAttribute('style', ``);
     projectImage[0].classList.remove('instachatter');
 }
 }
