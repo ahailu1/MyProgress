@@ -13,9 +13,11 @@
      padding: 0 0 5rem 0;
  }
 &__wrapper{
+@media(min-width:320px){
     display: flex;
     flex-direction: column;
     width: 100%;
+}
 }
 &__header{
     @media(min-width:320px){
@@ -47,15 +49,6 @@
         margin: 1rem 0 1rem 0;
     }
 
-&.second{
-    @media(min-width:320px){
-        //margin: 6rem 0 8rem 0;
-    }
-    //border-top: solid white 2px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-}
 }
 }
 
@@ -70,9 +63,12 @@
             align-items: flex-start;
         }
         @media(min-width:768px){
+            align-items: center;
+            justify-content: center;;
             margin: 2rem 0 3rem 0;
         }
         @media(min-width:950px){
+            justify-content: flex-start ;
             position: relative;
             flex-direction: row;
             margin: 2rem 0 2rem 0;
@@ -94,8 +90,12 @@
             display: flex;
             flex-direction: column;
         }
+        @media(min-width:768px){
+            border-radius: 0.35rem;
+            width: 75%;
+        }
         @media(min-width:968px){
-            padding: 2.5rem 0 0 2rem;
+            padding: 2.5rem 2rem 1rem 2rem;
             border-radius: 0.55rem;
             z-index: 10;
             width: 55%;
@@ -107,29 +107,12 @@
                width: 50%;
            }
         //box-shadow: 0 0 4px 0 #141212;
-        &.almadina{
-            @media(min-width:320px){
-                padding: 3rem 0 3rem 3rem;
-                width: 100%;
-                align-items: flex-start;
-                justify-content: center;
-    
-            }
-        }
 
 }
     }
 
 }
 
-.mylaptop{
-    @media(min-width:320px){
-        width: 100%;
-        //box-shadow: 0 0 3px 0 gray;
-        z-index: 25;
-    }
-    width: 80%;
-}
 .project{
     &__image{
         @media(min-width:320px){
@@ -146,7 +129,7 @@
             left: 0;
         }
         @media(min-width:768px){
-            width: 90%;
+            width: 60%;
             margin-bottom: -2.5rem;
             margin-left: 2rem;
             box-shadow: 0 0 3px 0 gray;
@@ -160,17 +143,15 @@
             width: 50%;
             height: auto;
             transform: translate(-3rem, -5rem) scale(1.2);
-            transition: all ease-in-out 0.5s;
+            transition: all ease-in-out 1s;
             align-items: flex-start;
+            opacity: 0;
+            z-index:50;
         }
         @media(min-width:1100px){
             width: 40%;
             transform: translate(-3rem, -5rem) scale(1.15);
 
-        }
-        &.instachatter{
-            //transform: translate(-2rem, 0rem);
-            transition: all ease-in-out 1s;
         }
         &__gif{
             @media(min-width: 320px){
@@ -186,18 +167,6 @@
         }
         &__item{
         }
-        &__two{
-                @media(min-width: 320px){
-                    width: 100%;
-                }
-
-            //transform: translate(-5rem, -5rem);
-            width: 60%;
-            z-index: 20;
-            display: flex;
-            flex-direction: column;
-        
-    }
 &:hover::after{
     transition: all 0.55s ease-in-out;
     height: 0%;
@@ -206,18 +175,23 @@
 }
 }
     &__header{
-        width: auto;
-        line-height: 3.5rem;
-        font-size: 2rem;
-        color: #2b2b2b;
-        font-weight: 700;
-        text-align: left;
-        margin: 0 0.5rem 0 0;
+        @media(min-width:320px){
+            color: #2b2b2b;
+            font-size: 1.5rem;
+            font-weight: 700;
+
+        }
+        @media(min-width:768px){
+            font-size: 2rem;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+
+        }
+        &__span{}
         &__title{
             @media(min-width:320px){
+                font-weight: 700;
                 font-size: 2.75rem;
                 padding: 2rem 0 2rem 0;
-                font-weight: 700;
                 letter-spacing: 2px;
             }
             @media(min-width:768px){
@@ -254,29 +228,27 @@
             width: 80%;
         }
         @media(min-width:1024px){
-            width: 70%;
+            width: 75%;
             flex-wrap: wrap;
         }
         &.almadina{
-            @media(min-width:320px){
-                display: flex;
-                flex-wrap: wrap;
-            }
-            & span {
-                @media(min-width:320px){
-                    width: 40%;
-                    text-align: center;
-                    border-radius: 0.35rem;
-                }
+            display: flex;
+            flex-direction: column;
+        }
+        &__about{
+            @media(min-width:1024px){
+                width: 75%;
+                padding: 0rem 0rem 1rem 0;
             }
         }
-        text-align: start;
-        width: 85%;
-        color: #2b2b2b;
-        font-weight: 500;
-        padding: 1rem 0 1.25rem 0;
+        &__container__item{
+            display: flex;
+            flex-wrap: wrap;
+        }
     &__item{
         @media(min-width:320px){
+        color: #2b2b2b;
+        font-weight: 500;
             margin: 0.25rem 0.15rem 0.15rem 0;
             border-radius: 0.35rem;
             background-color: #2b2b2b;
@@ -284,11 +256,17 @@
             padding: 0.35rem;
     
         }
+        @media(min-width:968px){
+            padding: 0.5rem;
+            height: auto;
+        }
     &:hover{
         background-color: #ffffd1;
         color: #2b2b2b;
-    }}
     }
+}
+
+}
     &__button{
         margin: 1rem 0 1.5rem 0;
         display: flex;

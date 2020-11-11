@@ -22,7 +22,6 @@ var calcDistance = function(element){
     let elTop = element.getBoundingClientRect().top;
     let val = (((pageHeight - elTop) / elHeight) * 100) - 10;
     val = val > 100 ? 100 : val;
-    console.log(val + 'hello');
     return val;
 }
 window.addEventListener('scroll', () => {
@@ -50,30 +49,33 @@ hello.hello();
     //childrenNode[0].style.color = "green";
        //console.log(scrollPos);
 
-       console.log([pageHeight,topCard, 'waste',itemTop]);
-
         if(documentBody > scrollPos){
             scrollPos = documentBody;
             aboutContainerHeight.setAttribute('style', ``);
             aboutContainer.classList.add('toggled');
 
         } else {
-            scrollPos = documentBody;
-            aboutContainer.classList.remove('toggled');
-            aboutContainerHeight.setAttribute('style', `height:${distance}%;background-color:#1d1d20; color: white;`);
+            if(aboutContainer.getBoundingClientRect().top > 0){
+                scrollPos = documentBody;
+                aboutContainer.classList.remove('toggled');
+                aboutContainerHeight.setAttribute('style', `height:${distance}%;background-color:#1d1d20; color: white;`);
     
+            }    
         }
     }
     
     if(topCard < pageHeight){
         if(documentBody > secondScrollPos){
-            aboutCardSpan[0].setAttribute('style', ``);
+            aboutCardSpan[0].setAttribute('style', `height:0;opacity:0;`);
             aboutCard[0].classList.add('toggled');
             secondScrollPos = documentBody;
         } else {
-            aboutCardSpan[0].setAttribute('style', `height:${cardDistance}%;background-color:whitesmoke; color: white;`);
-            aboutCard[0].classList.remove('toggled');
-            secondScrollPos = documentBody;
+            if(topCard > 0){
+                aboutCardSpan[0].setAttribute('style', `height:${cardDistance}%;background-color:whitesmoke; color: white;`);
+                aboutCard[0].classList.remove('toggled');
+                secondScrollPos = documentBody;
+    
+            }
         }
     }
 
@@ -83,15 +85,19 @@ hello.hello();
         if(documentBody > thirdScrollPos){
             //aboutCardInformationChildrenTwo[0].style.color = "#1d1d20";
             //aboutCardInformationChildrenTwo[1].style.color = "#1d1d20";
-            aboutCardSpan[1].setAttribute('style', ``);
+            aboutCardSpan[1].setAttribute('style', `height:0;`);
             thirdScrollPos = documentBody;
             aboutCard[1].classList.remove('toggled');
 
             //aboutCard[0].classList.remove('toggled');
         } else {
-            aboutCardSpan[1].setAttribute('style', `height:${cardDistanceTwo}%;background-color:#1d1d20; color: white;`);
-            thirdScrollPos = documentBody;
-            aboutCard[1].classList.add('toggled');
+            if(topCardTwo > 0){
+                aboutCardSpan[1].setAttribute('style', `height:${cardDistanceTwo}%;background-color:#1d1d20; color: white;`);
+                thirdScrollPos = documentBody;
+                aboutCard[1].classList.add('toggled');
+                console.log(aboutCard[1].getBoundingClientRect().top + 'this tha top');
+    
+            }
         }
     }
 
@@ -100,12 +106,15 @@ hello.hello();
         aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
         if(documentBody > fourthScrollPos){
             aboutTech.classList.add('toggled');
-            aboutTechWrapper.setAttribute('style', ``);
+            aboutTechWrapper.setAttribute('style', `height:0;opacity:0;`);
             fourthScrollPos = documentBody;
         } else {
-            aboutTech.classList.remove('toggled');
-        aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
-            fourthScrollPos = documentBody;
+            if(aboutTechTop > 0){
+                aboutTech.classList.remove('toggled');
+                aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
+                    fourthScrollPos = documentBody;
+        
+            }
         }
     }
 
