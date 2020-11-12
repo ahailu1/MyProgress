@@ -1,50 +1,145 @@
+.togglednav{
 
-
-.mynav{
-    display: flex;
-    width: 100%;
-    height: 0px;
-    z-index: 25;
-    border-bottom: solid  #ffffe3 2px;
-    //position: fixed;
-    transition: all ease-in-out 0.5s;
-
-    &::after{
-        /*
-    top: 0;
-    left: 0;
-    content: "";
-    display: flex;
-    background-color: orange;
-*/
+&:nth-child(2){
+    margin: 0.5rem 0 0.5rem 0;
 }
-    &.toggled{
-        padding: 0rem;
 
-        background-color: #1d1d20;
-        border-top: none;
-        height: 4rem;
-        border-bottom: solid  #ffffe3 2px;
+    @media(min-width: 320px){
+        width: 3rem;
+        background-color: white;
+        height: 0.35rem;
+        border: solid white;
+        border-radius: 0.25rem;
+        //margin: 0.35rem 0 0rem 0;
+        display: flex;
+        opacity: 1;
         transition: all ease-in-out 0.5s;
     }
-    &__list{
-        margin-top: 2rem;
-    display: flex;
-    list-style: none;
-    width: 100%;
-    height: 0;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom: none;
-    &.toggled{
+    @media(min-width:768px){
+        display: none;
     }
+    &__container{
+        
+        @media(min-width:320px){
+            justify-content: flex-end;
+            padding: 1rem 0.5rem 0.25rem 0.5rem;
+            display: flex;
+            margin: 0rem 0 0 0;
+            flex-direction: column;
+            z-index: 9000;
+    
+        }
+        @media(min-width:768px){
+            display: none;
+        }
+    }
+    &.first{
+        transition: all ease-in-out 0.5s;
+        transform:rotate(45deg) translate(0.7rem, 0.85rem);
+    }
+    &.second{
+        transition: all ease-in-out 0.5s;
+        opacity: 0;
+    }
+    &.third{
+        transition: all ease-in-out 0.5s;
+        transform:rotate(-45deg) translate(0.5rem, -0.5rem);
+
+    }
+}
+
+.mynav{
+    @media(min-width: 320px){
+        background-color: #1d1d20;
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        z-index: 25;
+        height: 3.75rem;
+        border-bottom: solid  #ffffe3 2px;
+        position: fixed;
+        //transition: all ease-in-out 1s;
+        z-index: 500;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    @media(min-width:768px){
+        transition: all ease-in-out 1s;
+        background-color: transparent;
+        flex-direction: row;
+        height: 0px;
+        align-items: flex-start;
+    }    
+    &.toggled{
+        
+        @media(min-width: 320px){
+            //padding:0.5rem;
+            background-color: #1d1d20;
+            border-top: none;
+            height: auto;
+            border-bottom: solid  #ffffe3 2px;
+            transition: all ease-in-out 1s;
+        }
+        @media(min-width:768px){
+            transition: all ease-in-out 1s;
+            height: 3.75rem;
+        }
+    }
+    &__list{
+        @media(min-width:320px){
+            
+            list-style: none;
+            width: 0;
+            height: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transition: all ease-in-out 0.5s;
+            border-bottom: none;   
+            opacity: 0;
+        }
+        @media(min-width: 768px){
+            align-items: flex-start;
+            height: 100%;
+            margin: 0;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            opacity: 1;
+            transition: all ease-in-out 1s;
+
+        }
+    &.toggled{
+        @media(min-width:320px){
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: all ease-in-out 1s;    
+        }
+        @media(min-width:768px){
+
+        }
+        }
 
     & li{
-    padding: 0.5rem;
+        @media(min-width:320px){
+            padding: 0.75rem;
+            width: 100%;
+            background-color: #1d1d20;
+            font-size: 1.35rem;
+            box-shadow: 0 0 3px 0 #1d1d20;
+        }
+        @media(min-width:768px){
+            background-color: transparent;
+            font-size: 1rem;
+            
+
+        }
 
 }
 & a {    
-    margin-top: 2rem;
+    margin: 2rem 0.5rem 0 0.5rem;
     color: white;
     text-decoration: none;
 &:hover{

@@ -39,6 +39,7 @@ hello.hello();
 
     let topCard = cardRect.top;
     let topCardTwo = cardRectTwo.top;
+    //get top of document body
     var documentBody = document.body.getBoundingClientRect().top;
     var distance = calcDistance(aboutContainer);
     var cardDistance = calcDistance(aboutCard[0]);

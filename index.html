@@ -10,16 +10,20 @@
 </head>
 <body>
     <nav class="mynav toggled">
-        <ul class = "mynav__list toggled">
-            <li class = "mynav__list__item"><a href = "#">Home</a></li>
-            <li><a href = "#">  About</li></a>
-            <li><a href = "#"> Technologies</a></li>
-            <li><a href = "#"> Projects</a></li>
-            <li><a href = #> Contact</a></li>
+        <div class = "togglednav__container">
+            <span class = "togglednav"></span>
+            <span class = "togglednav"></span>
+            <span class = "togglednav"></span>
+        </div>
+        <ul class = "mynav__list">
+            <li class = "mynav__list__item" id = "nav__home"><a href = "#">Home</a></li>
+            <li><a href = "#/about" id = "nav__about">  About</li></a>
+            <li><a href = "#/Projects" id = "nav__projects"> Projects</a></li>
+            <li><a href = "#/Contact" id = "nav__contact"> Contact</a></li>
         </ul>
     </nav>
-    <section class = "section__homepage">
 
+    <section class = "section__homepage">
 <div class="section__homepage__first">
         <div class = "section__homepage__icon__container">
             <a href ="https://github.com/ahailu1" target = "_blank" ><i class="fab fa-github homepage__icon"></i>
@@ -155,7 +159,22 @@
                 </ul>
         </div>
     </div>
-
+    <div class = "technology__language__container">
+        <p class = "technology__name">PHP</p>
+    <div class = "technology__language">  
+        <div class = "technology__language__relative postgresql">
+            <div class = "technology__language__blur">
+            </div>
+        </div>
+            <ul class = "technology__list">
+                <li>0</li>
+                <li>6 months</li>
+                <li>1 Year</li>
+                <li>18 months</li>
+                <li>2 Years</li>
+            </ul>
+    </div>
+</div>
         <div class = "technology__language__container">
             <p class = "technology__name">C#</p>
             <div class = "technology__language">
