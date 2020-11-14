@@ -16,10 +16,10 @@
             <span class = "togglednav"></span>
         </div>
         <ul class = "mynav__list">
-            <li class = "mynav__list__item" id = "nav__home"><a href = "#">Home</a></li>
-            <li><a href = "#/about" id = "nav__about">  About</li></a>
-            <li><a href = "#/Projects" id = "nav__projects"> Projects</a></li>
-            <li><a href = "#/Contact" id = "nav__contact"> Contact</a></li>
+            <li class = "mynav__list__item" id = "nav__home"><a href = "/#home" class = "mynav__anchor">Home</a></li>
+            <li><a href = "/#about" id = "nav__about" class = "mynav__anchor">  About</li></a>
+            <li><a href = "/#Projects" id = "nav__projects" class = "mynav__anchor"> Projects</a></li>
+            <li><a href = "/#Contact" id = "nav__contact" class = "mynav__anchor"> Contact</a></li>
         </ul>
     </nav>
 
@@ -34,7 +34,7 @@
             <div>
                 <h3>Hello, I'M <span class="custom__colour">ALEXANDER HAILU</span> </h3>
                 <p>And I am currently looking for a position<span class="custom__colour"> in Web-Development</span> </p>
-                <p>I enjoy both front-end and back-end, hence my interest in full-stack develpoment, but am open to positions in either domain</p>
+                <p>I enjoy both front-end and back-end, hence my interest in full-stack develpoment, but am open to positions in either domain.</p>
                 <p>Feel free to scroll through to see a list of my projects and get a detailed overview about myself</p>
             </div>
 </div>
@@ -48,7 +48,7 @@
     <div class = "section__about__container__personal">
         <div class = "about__container toggled">
                 <h1>About Me</h1>
-                <p> Upon Graduation, I took various positions within the field of sales, despite my passion for Web-Development and programming.Most of my free time was spent working on mini web-development projects and trying to hone my skills so that I could eventually bring my ideas into action.I'd often ask myself why I was spending time in a field I disliked,and also took time away from doing things that I truly have a passion for. Since then I've been studying rigorously in hopes of securing a position as a web developer </p>    
+                <p> Upon Graduation, I took various positions within the field of sales, but quickly realized that I would much rather spend time doing what I truly enjoyed--- Web Development and programming. When I wasn't working, I spent my free time working on mini web-development projects and trying to hone my skills so that I could eventually bring my ideas into action.I'd often ask myself why I was spending time in a field that I didn't enjoy,and, even worse, that took time away from doing things that I had actually enjoyed. Since then I've been studying rigorously and building side-projects in hopes of securing a position as a web developer </p>    
                 <span class = "about__container__span"></span>
         </div>
         
@@ -59,7 +59,8 @@
             </div>
                 <div class = "section__about__card__information toggled">   
                     <p class = "about__title">Education</p>
-                    <p class = "about__paragraph">Ryerson University BComm-- Business Technology Management</p>
+                    <p class = "about__paragraph">Ryerson University</p>
+                     <p class = "about__paragraph">    Bachelor of Commerce-- Business Technology Management</p>
                 </div>
         </div>
 
@@ -79,7 +80,7 @@
     
     <div class = "technology__language__wrapper">        
     </div>
-                <h1 class = "technology__header">Technologies</h1>
+    <h1 class = "technology__header">Technologies</h1>
             <div class = "technology__language__container">
                 <p class = "technology__name html">HTML/CSS</p>
                 <div class = "technology__language html">
@@ -196,19 +197,20 @@
 <Section class = "section__projects">
 <div class = "section__projects__wrapper">
         <div class="section__projects__header">
-            <span class = "project__header__divider second"></span>
-            <span class = "project__header__title">PROJECTS</span>
+            <i class="fas fa-hammer homepage__icon project__icon"></i>
+            <span class = "project__header__title homepage__icon">PROJECTS</span>
             <span class = "project__header__divider second"></span>
         </div>
     <div class="section__projects__allprojects"> 
         <div class="project__one">
             <div class = "project__one__text"> 
                 <div class = "project__one__title"> 
+
                     <span class = "project__header">INSTACHATTER</span>
                     <span class = "project__header__line"></span>
                 </div>
                     <div class = "project__one__text__description">
-                        <p class = "project__description__about"> A full stack application that allows you to create an account, add friends,delete friends,set a lock to your chat, create groups.<br/> Moreover, all chat history and user-information was stored in a database. </p>
+                        <p class = "project__description__about"> A full stack React application that allows you to create an account, add friends,delete friends,set a lock to your chat, create groups.<br/> Moreover, all chat history and user-information was stored in a PostgreSQL database. </p>
                         <div class = "project__description"> 
                             <span class = "project__description__item">Node</span>
                             <span class = "project__description__item">ReactJs</span>
@@ -234,7 +236,7 @@
                     </div>
                     <div class = "project__one__text__description">
 
-                    <p class = "project__description__about">Almadina Pizza is a family owned restaurant in Scarborough, Ontario. This website was build with wordpress, however, css was added to over-ride plug-in settings, or to customize items that couldn't be customized through plug-ins. </p>
+                    <p class = "project__description__about">Almadina Pizza is a family owned restaurant in Scarborough, Ontario. Although this website was build with wordpress, CSS was added to override plug-in settings, and to customize items that couldn't be customized through plug-ins. </p>
                         <div class = "project__description almadina">
                             <div class = "project__description__container__item">
                                 <span class = "project__description__item">WordPress</span>
@@ -289,20 +291,19 @@
 <Footer class = "section__footer">
 <div class = "section__footer__content">
 <div class = "footer__icon">
-    <i class="fab fa-linkedin-in homepage__icon"></i>
-    <i class="fab fa-github homepage__icon"></i>
-    <i class="fab fa-instagram homepage__icon"></i>
-    <i class="fab fa-facebook homepage__icon"></i>
+     <a href = "https://www.facebook.com/alex.hailu.16" target = "_blank"><i class="fab fa-facebook homepage__icon"></i></a>
+     <a href = "https://ca.linkedin.com/in/alexanderhailu" target = "_blank"><i class="fab fa-linkedin-in homepage__icon"></i></a>
+     <a href = "https://github.com/ahailu1" target = "_blank"><i class="fab fa-github homepage__icon"></i></a>
 </div>
         <div class = "footer__about">This project was made with Javascript, (S)CSS, and HTML.<br/> No frameworks or libraries were used in its creation :);</div>
             <div class = "footer__links">
-                <p>Home</p>
-                <span class = "footer__divider">|</span>
-                <p>About</p>
-                <span class = "footer__divider">|</span>
-                <p>Technology</p>
-                <span class = "footer__divider">|</span>
-                <p>Contact </p>
+                <p><a href = "#Home" id = "footer__home">Home</a></p>
+               <span class = "footer__divider">|</span>  </p>
+               <p> <a href = "#About" id = "footer__about">About</a>  </p>
+              <p>    <span class = "footer__divider">|</span></a> </p>
+              <p>    <a href = "#Projects" id = "footer__projects"> Technology</a> </p>
+              <p>    <span class = "footer__divider">|</span> </p>
+              <p>    <a href = "#Contact" id = "footer__contact">Contact </a> </p>
             </div>
         </div>
     <div class = "footer__copyright">

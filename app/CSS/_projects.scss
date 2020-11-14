@@ -1,16 +1,21 @@
 .section__projects{
     background-color: #1d1d20;
     height: auto;
- padding: 4rem 0 4rem 0;
  @media(min-width:320px){
     background-attachment: fixed;
     background-image: url('./app/images/rippleback.png');
+    background-size: cover;
      padding: 0;
      display: flex;
      justify-content: flex-start;
  }
  @media(min-width:968px){
      padding: 0 0 5rem 0;
+ }
+ @media(min-width:1200px){
+     margin: 0;
+    padding: 2rem 0 4rem 0;
+
  }
 &__wrapper{
 @media(min-width:320px){
@@ -21,10 +26,10 @@
 }
 &__header{
     @media(min-width:320px){
-        font-size: 3rem;
         margin:0;
         display: flex;
         color: whitesmoke;
+        justify-content: center;
     }
     @media(min-width:450px){
         padding: 3rem 0 3rem 0;
@@ -35,9 +40,13 @@
     @media(min-width:900px){
         font-size: 4rem;
         margin:0;
-        padding: 4rem 0 3rem 0;
+        padding: 3rem 0 3rem 0;
         text-align: center;
         justify-content: center;
+    }
+    @media(min-width:1200px){
+        box-shadow: 0 0 3px 0 gray;
+        margin: 0rem 0 5rem 0;
     }
 }
 &__allprojects{
@@ -49,7 +58,13 @@
         margin: 1rem 0 1rem 0;
     }
     &.second{
-        margin: 5rem 0 3rem 0;
+        @media(min-width:320px){
+
+        }
+        @media(min-width:768px){
+            margin: 5rem 0 3rem 0;
+
+        }
     }
 
 }
@@ -68,7 +83,7 @@
         @media(min-width:768px){
             align-items: center;
             justify-content: center;;
-            margin: 2rem 0 3rem 0;
+            margin: 2rem 0 0rem 0;
         }
         @media(min-width:950px){
             justify-content: flex-start ;
@@ -110,10 +125,26 @@
                width: 50%;
            }
         //box-shadow: 0 0 4px 0 #141212;
-
 }
     }
+&__icon{
+    @media(min-width:320px){
+        display: flex;
+        color:#ffffe3;
+        align-items: center;
+        padding:  0 2rem 0 0.5rem;
+        font-size: 4rem;
+    
+    }
+    @media(min-width:768px){
+        font-size: 5rem;
 
+    }
+&:hover{
+    color: none;
+    font-size: 6rem;
+}
+}
 }
 
 .project{
@@ -193,7 +224,7 @@
         &__title{
             @media(min-width:320px){
                 font-weight: 700;
-                font-size: 2.75rem;
+                font-size: 2rem;
                 padding: 2rem 0 2rem 0;
                 letter-spacing: 2px;
             }
@@ -203,7 +234,10 @@
             @media(min-width:968px){
                 font-size:4rem;
                 letter-spacing: 2px;
-    
+            }
+            @media(min-width:1200px){
+                font-size: 3.5rem;
+                border-bottom: solid #ffffd1 8px;
             }
         }
         &__line{
@@ -219,7 +253,10 @@
             align-self: center;
             flex-grow: 1;
             border: solid #ffffe3;
-        }
+            display: none;
+       &.first{
+           display: none;
+       } }
 
 }
     &__description{
@@ -287,7 +324,6 @@
         position: relative;
         &.resume{
             margin: 1.5rem 0 1.5rem 0;
-            box-shadow: none;
             padding: 0.5rem;
             height: 2rem;
             font-size: 0.5rem;

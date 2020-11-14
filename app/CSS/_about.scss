@@ -13,6 +13,10 @@
         @media(min-width:320px){
             font-size: 0.9rem;
         }
+        @media(min-width:768px){
+            margin: 0.5rem 0 0.5rem 0;
+
+        }
     }
     &__container{
         @media(min-width:320px){
@@ -182,15 +186,19 @@ width: 100%;
         padding: 2rem 2rem 2rem 2rem;
         width: 100%;
     }
+    @media(min-width:769px){
+    }
     @media(min-width:900px){
         background-color: whitesmoke;
         justify-content: start;
         transition: all ease-in-out 1.25s;
-        width: 40%;
+        width: 50%;
         border-radius: 0.35rem;
         padding: 2rem 0.5rem 2rem 0.5rem;
     }
     @media(min-width:1200px){
+        margin-left: -0.5rem;
+        width: 40%;
 box-shadow: 0 0 3px 0 #1d1d20;
 
     }
@@ -310,20 +318,22 @@ margin-bottom: 0;
 font-size: 0.5rem;
 text-transform: uppercase;
 box-shadow: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
         }
 
         @media(min-width:500px) {
             box-shadow: 0 0 2px 0 gray;
-            font-size: 0.75rem;
+            font-size: 0.70rem;
         }
-        box-shadow: 0 0 2px 0 gray;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.75rem;
+
+        @media(min-width:768px){    
+            font-size: 0.85rem;
+        }
         @media(min-width:900px){
-            height: 2rem;
+            font-size: 0.65rem;
+            height: 100%;
         }
     }
   
@@ -361,23 +371,23 @@ box-shadow: 0;
             width: 90%;
         }
         @media(min-width:900px){
-            height: 2rem;
         }
         }
         
     &__relative{
+        @media(min-width:320px){
+            position: relative;
+            height: 100%;
+            width: 0;
+            background-color: #9dbbff;
+                    transition: all ease-in-out 1.25s;      
+            height: 100%;
+        }
         @media(min-width: 900px){
             border-radius: 0 0.35rem 0.35rem 0;
-
         }
-        border-radius: 0 0.35rem 0.35rem 0;
         top: 0;
         //background-color:  #004374;
-        position: relative;
-        height: 100%;
-        width: 0;
-        background-color: #9dbbff;
-                transition: all ease-in-out 1.25s;
         &.html, &.javascript{
             width: 100%;
             animation: progressbar ease-in-out 6s;
@@ -390,21 +400,30 @@ box-shadow: 0;
 
         }
         
+    &::after{
+        @media(min-width:320px){
+            position: absolute;
+            top: -90%;
+            background-color: black;
+            right: 0;
+            box-shadow: 0 0 3px 0 gray;
+            display: flex;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            height: 2.25rem;
+            transform: translate(-20%, 30%);
+            width: 2.75rem;
+            font-size: 0.55rem;
+            color: whitesmoke;
+            justify-content: center;
+            align-items: baseline;
+    
+        }        
+    }
     &.postgresql::after, &.sql::after, &.nodejs::after{
-        position: absolute;
-        top: -95%;
-        background-color: black;
-        right: 0;
-        box-shadow: 0 0 3px 0 gray;
-        display: flex;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-        height: 2.25rem;
-        width: 2.75rem;
-        font-size: 0.55rem;
-        content: '6 Months';
-        color: whitesmoke;
-        justify-content: center;
-        align-items: baseline;
+        content: '8 months';
+    }
+    &.html::after,&.javascript::after{
+        content: "2 years";
     }
 }
     &__blur{
@@ -418,7 +437,7 @@ box-shadow: 0;
         display: flex;
         width: 100%;
         //background:#417597;
-        border-radius: 0.35rem;
+        border-radius: 0 0.35rem 0.35rem 0;
         transition: all ease-in-out 0.5s;
         //clip-path: circle(50% at 50% 50%);
         //border-radius: 0 0.5rem 0.5rem 0;

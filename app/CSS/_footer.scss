@@ -20,15 +20,19 @@
         justify-content: center;
         display: flex;
     & i {
-        padding: 0.5rem;
+        padding: 0rem;
         margin: 0rem 0.75rem 0 0.75rem;
-
+&:hover{
+    padding: 0 0rem 0 0rem;
+    font-size: 1.75rem;
+    margin: 0 1rem 0 1rem;
+}
     }
     }
     &__copyright{
         display: flex;
         justify-content: center;
-        background-color: #37373d;
+        background-color: #26262b;
         width: 100%;
         padding: 0.5rem;
     & p, span{
@@ -45,6 +49,13 @@
         font-size: 0.75rem;
         color: whitesmoke;
    
+    }
+    & a {
+        color: whitesmoke;
+        text-decoration: none;
+    &:visited{
+        color: white;
+    }
     }    
     }
     &__about{

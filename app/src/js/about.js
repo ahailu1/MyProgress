@@ -9,14 +9,12 @@ var aboutCardInformation = document.getElementsByClassName('section__about__card
 var aboutBody = document.getElementsByClassName('section__about')[0];
 var aboutTech = document.getElementsByClassName('section__about__container__description')[0];
 var aboutTechWrapper = document.getElementsByClassName('technology__language__wrapper')[0];
-
 var scrollPos = 0;
 var secondScrollPos = 0;
 var thirdScrollPos = 0;
 var fourthScrollPos = 0;
 //technology toggle
 var technologyContainer = document.getElementsByClassName('technology__language');
-
 var calcDistance = function(element){
     let elHeight = element.getBoundingClientRect().height;
     let elTop = element.getBoundingClientRect().top;

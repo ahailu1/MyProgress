@@ -35,7 +35,10 @@ if((firstProjectTextTop <= windowSize) && window.innerWidth > 968){
     
     projectImage[0].classList.add('instachatter');
     projectImage[0].setAttribute('style', `left:${height[0]}%;opacity:${height[1]};`);
-} else {
+} else if(window.innerWidth < 967) {
+    projectImage[0].setAttribute('style', '');
+}
+    else {
     //projectImage[0].setAttribute('style', ``);
     //projectImage[0].classList.remove('instachatter');
 }

@@ -121,6 +121,15 @@ padding: 0 0 0 5rem;
     border: solid black 2px;
 }
 &.message{
+    @media(min-width:320px){
+        height: 40%;
+        resize: none;
+
+    }
+    @media(min-width:968px){
+        height: 40%;
+        resize: none;
+    }
     height: 30%;
 }
 }

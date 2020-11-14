@@ -14,17 +14,16 @@
 
 .section__homepage{
     @media(min-width:320px){
+        height: 120vh;
     flex-direction: column-reverse;
     width: 100%;
     box-sizing: border-box;
-    align-items: flex-start;
-    padding: 2rem 0 15rem 0.75rem;
+    align-items: flex-end;
     background-color: whitesmoke;
     position: relative;
     z-index: 5;
-    height: auto;
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-end;
 }
 @media(min-width:476px){
     align-items: center;
@@ -44,12 +43,11 @@ padding: 2rem 7rem 10rem 1rem;
     @media(min-width:1000px){
         //justify-content: space-around;
         height: 120vh;
-        padding: 3rem 2rem 0 4rem;
+        padding: 3rem 2rem 0 10rem;
         }
-    
 
-    &::after{
-        @media(min-width:320px){
+&::after{
+         @media(min-width:320px){
             position:absolute;
             width:100%;
             z-index: -1;
@@ -72,17 +70,17 @@ padding: 2rem 7rem 10rem 1rem;
     &__first{
         @media(min-width:320px){
             padding: 0;
-            padding: 0 3rem 0 5rem;
             display: flex;
             flex-direction: column-reverse;
+            padding: 1rem;
         }
         @media(min-width:600px){
             padding: 2rem 1rem 2rem 0;
             width: 100%;
         }
         @media(min-width:1000px){
-            width: 40%;
-            height: 20rem;  
+            width: 45%;
+            
         }
     & h3{
         @media(min-width:320px){
@@ -109,6 +107,7 @@ padding: 2rem 7rem 10rem 1rem;
             font-size: 0.9rem;
         }
         @media(min-width: 1000px){
+            width: 100%;
             font-size: 1rem;
             padding: 0.25rem;
         }
@@ -131,10 +130,12 @@ padding: 2rem 7rem 10rem 1rem;
         display: flex;
         height: 15rem;
     }
+    @media(min-width:668px){
+        width: auto;
+    }
     @media(min-width:678px){
         width: 100%;
         justify-content: center;
-        height: 20rem;
     }
     @media(min-width:768px){
         height: 100%;
@@ -153,10 +154,14 @@ padding: 2rem 7rem 10rem 1rem;
         width: 100%;
         justify-content: center;
     }
+    @media(min-width:668px){
+        width: 65%;
+    }
     @media(min-width:768px){
+        width: 60%;
     }
     @media(min-width:1000px){
-        width: auto;
+        width: 45%;
         height: auto;
         margin-top: -2rem;  
     }
@@ -164,7 +169,7 @@ padding: 2rem 7rem 10rem 1rem;
         margin-top: -4rem;  
 
         height: auto;  
-        width: 40%;
+        width: 35%;
     }
 }
 }

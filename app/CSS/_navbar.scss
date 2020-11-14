@@ -35,7 +35,7 @@
     }
     &.first{
         transition: all ease-in-out 0.5s;
-        transform:rotate(45deg) translate(0.7rem, 0.85rem);
+        transform:rotate(45deg) translate(0.75rem, 0.85rem);
     }
     &.second{
         transition: all ease-in-out 0.5s;
@@ -43,7 +43,7 @@
     }
     &.third{
         transition: all ease-in-out 0.5s;
-        transform:rotate(-45deg) translate(0.5rem, -0.5rem);
+        transform:rotate(-45deg) translate(0.4rem, -0.5rem);
 
     }
 }
@@ -87,7 +87,7 @@
     }
     &__list{
         @media(min-width:320px){
-            
+            display: none;
             list-style: none;
             width: 0;
             height: 0;
@@ -99,10 +99,10 @@
             opacity: 0;
         }
         @media(min-width: 768px){
-            align-items: flex-start;
             height: 100%;
             margin: 0;
             width: auto;
+            
             display: flex;
             flex-direction: row;
             opacity: 1;
@@ -116,6 +116,7 @@
             height: 100%;
             display: flex;
             transition: all ease-in-out 1s;    
+            
         }
         @media(min-width:768px){
 
@@ -131,6 +132,8 @@
             box-shadow: 0 0 3px 0 #1d1d20;
         }
         @media(min-width:768px){
+            display: flex;
+            align-items: center;
             background-color: transparent;
             font-size: 1rem;
             
@@ -138,13 +141,22 @@
         }
 
 }
-& a {    
-    margin: 2rem 0.5rem 0 0.5rem;
-    color: white;
-    text-decoration: none;
-&:hover{
-    font-size: 1.2rem;
-    transition: all 0.2s ease-in-out;
-}}
     }
+    &__anchor{    
+        color: whitesmoke;
+        font-weight: 600;
+        padding: 0.25rem;
+        border-radius: 0.35rem;
+        //margin: 0 2rem 0 2rem;
+        text-decoration: none;
+        &.toggled{
+            transition: all ease-in-out 0.5s;
+            width: 100%;
+            background-color: #ffffe3;
+            color: #1d1d20;
+        }
+    &:hover{
+        font-size: 1.2rem;
+        transition: all 0.2s ease-in-out;
+    }}
 }
