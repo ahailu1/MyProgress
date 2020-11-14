@@ -894,17 +894,14 @@
     margin: 0.5rem 0 0.5rem 0;
   }
 }
-.about__container {
-  height: auto;
-  border-radius: 0.35rem;
-  padding: 1.25rem;
-  width: 80%;
-  position: relative;
-  z-index: 5;
-}
 @media (min-width: 320px) {
   .about__container {
     width: 100%;
+    height: auto;
+    border-radius: 0.35rem;
+    padding: 1.25rem;
+    position: relative;
+    z-index: 5;
   }
 }
 @media (min-width: 320px) {
@@ -914,6 +911,11 @@
     text-align: left;
     color: whitesmoke;
     padding: 0.5rem 0 0.5rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .about__container h1 {
+    font-size: 2rem;
   }
 }
 @media (min-width: 320px) {
@@ -971,11 +973,6 @@
 }
 .section__about__card {
   margin: 0.5rem 0 0.5rem 0;
-  border-radius: 0.35rem;
-  width: 80%;
-  height: 100%;
-  position: relative;
-  z-index: 5;
 }
 @media (min-width: 320px) {
   .section__about__card {
@@ -997,6 +994,7 @@
 @media (min-width: 900px) {
   .section__about__card {
     width: 100%;
+    box-shadow: 0 0 3px 0 lightgrey;
   }
 }
 .section__about__card i, .section__about__card p {
@@ -1084,7 +1082,9 @@
 @media (min-width: 900px) {
   .section__about__container__personal {
     width: 35%;
+    justify-content: space-between;
     flex-wrap: nowrap;
+    align-items: flex-end;
     flex-direction: column;
   }
 }
@@ -1148,8 +1148,13 @@
 }
 @media (min-width: 900px) {
   .technology__header {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1rem 0 1rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .technology__header {
+    font-size: 2rem;
   }
 }
 @media (min-width: 320px) {
@@ -1250,8 +1255,13 @@
   animation: progressbar ease-in-out 6s;
   transition: all ease-in-out 1s;
 }
-.technology__language__relative.postgresql, .technology__language__relative.sql, .technology__language__relative.nodejs, .technology__language__relative.reactjs {
-  width: 50%;
+.technology__language__relative.postgresql, .technology__language__relative.sql, .technology__language__relative.nodejs, .technology__language__relative.reactjs, .technology__language__relative.php {
+  width: 42%;
+  animation: progressbar ease-in-out 4s;
+  transition: all ease-in-out 1s;
+}
+.technology__language__relative.csharp {
+  width: 10%;
   animation: progressbar ease-in-out 4s;
   transition: all ease-in-out 1s;
 }
@@ -1273,11 +1283,14 @@
     align-items: baseline;
   }
 }
-.technology__language__relative.postgresql::after, .technology__language__relative.sql::after, .technology__language__relative.nodejs::after {
+.technology__language__relative.postgresql::after, .technology__language__relative.sql::after, .technology__language__relative.nodejs::after, .technology__language__relative.reactjs::after, .technology__language__relative.php::after {
   content: "8 months";
 }
 .technology__language__relative.html::after, .technology__language__relative.javascript::after {
   content: "2 years";
+}
+.technology__language__relative.csharp::after {
+  content: "3 months";
 }
 .technology__language__blur {
   position: absolute;
@@ -1460,31 +1473,64 @@
     resize: none;
   }
 }
-.myform__button {
-  margin: 0.5rem;
-  background-color: #1d1d20;
-  border: none;
-  border-radius: 0.35rem;
-  color: whitesmoke;
-  align-self: flex-start;
-  height: 2rem;
-  width: 5rem;
+@media (min-width: 320px) {
+  .myform__button {
+    margin: 0.5rem;
+    background-color: #1d1d20;
+    border: none;
+    border-radius: 0.35rem;
+    color: whitesmoke;
+    align-self: flex-start;
+    height: 2rem;
+    width: 5rem;
+  }
 }
-.contact__icon {
-  padding: 0 1rem 0 0rem;
+@media (min-width: 468px) {
+  .myform__button {
+    height: 2.5rem;
+  }
 }
-.contact__icon__text {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  width: 80%;
-  margin: 0rem 1rem 0 0;
-  padding: 0.75rem 0 0.5rem 0;
+@media (min-width: 768px) {
+  .myform__button {
+    height: 3rem;
+  }
+}
+@media (min-width: 968px) {
+  .myform__button {
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .contact__icon {
+    padding: 0 1rem 0 0rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 968px) {
+  .contact__icon {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 320px) {
+  .contact__icon__text {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0rem 1rem 0 0;
+    padding: 0.75rem 0 0.5rem 0;
+  }
 }
 @media (min-width: 320px) {
   .contact__header {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
+  }
+}
+@media (min-width: 420px) {
+  .contact__header {
+    font-size: 2rem;
   }
 }
 @media (min-width: 768px) {

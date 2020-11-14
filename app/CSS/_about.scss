@@ -21,13 +21,17 @@
     &__container{
         @media(min-width:320px){
             width: 100%;
+            height: auto;
+            border-radius: 0.35rem;
+            padding: 1.25rem;
+            position: relative;
+            z-index: 5;
         }
-        height: auto;
-        border-radius: 0.35rem;
-        padding: 1.25rem;
-        width: 80%;//background-color: #1d1d20;
-        position: relative;
-        z-index: 5;
+        @media(min-width:768px){
+
+        }
+        @media(min-width:768px){
+        }
         
         & h1 {
             @media(min-width:320px){
@@ -36,7 +40,9 @@
                 text-align: left;
                 color: whitesmoke;
                 padding: 0.5rem 0 0.5rem 0;
-
+            }
+            @media(min-width:768px){
+                font-size: 2rem;
             }
             
         }
@@ -120,16 +126,11 @@
     }
     @media(min-width:900px){
 width: 100%;
+box-shadow: 0 0 3px 0 lightgrey;
     }
     //transform: rotate(-5deg);
     //box-shadow: 0 0 3px 0 gray;
     margin: 0.5rem 0 0.5rem 0;
-    //box-shadow: 0 0 3px 0 lightgrey;
-    border-radius: 0.35rem;
-    width: 80%;
-    height: 100%;
-    position: relative;
-    z-index: 5;
     & i,p{
         color: #1d1d20;
     }
@@ -228,7 +229,9 @@ box-shadow: 0 0 3px 0 #1d1d20;
     }
     @media(min-width:900px){
         width: 35%;
+        justify-content: space-between;
         flex-wrap: nowrap;
+        align-items: flex-end;
         flex-direction: column;  
     }
 }
@@ -296,11 +299,11 @@ box-shadow: 0 0 3px 0 #1d1d20;
             transition: all ease-in-out 2s;
             }
             @media(min-width:900px){
-                font-size: 2.5rem;
+                font-size: 2rem;
                 padding: 1rem 0 1rem 0;
             }
             @media(min-width:1200px){
-
+                font-size: 2rem;
             }
     }
     &__name{
@@ -393,8 +396,13 @@ text-align: center;
             animation: progressbar ease-in-out 6s;
             transition: all ease-in-out 1s;
         }
-        &.postgresql, &.sql, &.nodejs, &.reactjs{
-            width: 50%;
+        &.postgresql, &.sql, &.nodejs, &.reactjs, &.php{
+            width: 42%;
+            animation: progressbar ease-in-out 4s;
+            transition: all ease-in-out 1s;
+        }
+        &.csharp{
+            width: 10%;
             animation: progressbar ease-in-out 4s;
             transition: all ease-in-out 1s;
 
@@ -419,11 +427,14 @@ text-align: center;
     
         }        
     }
-    &.postgresql::after, &.sql::after, &.nodejs::after{
+    &.postgresql::after, &.sql::after, &.nodejs::after, &.reactjs::after, &.php::after{
         content: '8 months';
     }
     &.html::after,&.javascript::after{
         content: "2 years";
+    }
+    &.csharp::after{
+        content: "3 months";
     }
 }
     &__blur{

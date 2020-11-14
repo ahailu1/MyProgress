@@ -122,10 +122,15 @@ hello.hello();
     let firstLang = technologyContainer[1];
     let secondLang = technologyContainer[2];
     let thirdLang = technologyContainer[3];
+    let fourthLang = technologyContainer[4];
+    let fifthLang = technologyContainer[5];
     let zeroTop = zeroLang.getBoundingClientRect().bottom;
     let firstTop = firstLang.getBoundingClientRect().bottom;
     let secondTop = secondLang.getBoundingClientRect().bottom;
     let thirdTop = thirdLang.getBoundingClientRect().bottom;
+    let fourthTop = fourthLang.getBoundingClientRect().bottom;
+    let fifthTop = fifthLang.getBoundingClientRect().bottom;
+
     //let fourthTop = fourthLang.getBoundingClientRect().top;
     ///let fifthLanguageTop = fifthLanguage.getBoundingClientRect().top;
     //let sixthLanguageTop = fifthLanguage.getBoundingClientRect().top;
@@ -143,8 +148,11 @@ hello.hello();
         }
     }
     toggleBar(zeroTop,0,getLanguageWidth,'html');
-
     toggleBar(firstTop,1,getLanguageWidth,'javascript');
     toggleBar(secondTop,2,getLanguageWidth,'reactjs');
     toggleBar(thirdTop,3,getLanguageWidth,'nodejs');
+    toggleBar(fourthTop,4,getLanguageWidth,'postgresql');
+    toggleBar(fifthTop,5,getLanguageWidth,'php');
+
+
 });
