@@ -97,7 +97,7 @@ window.addEventListener('scroll', (e) => {
     }
 
         console.log(scrollInit + 'scroll init');
-        if(window.scrollY > 0 &&  0 > homepageBottom){
+        if(window.scrollY > 0 &&  0 > homepageBottom && window.innerWidth > 765){
             scrollInit = documentBodyInit;
             console.log('up');
            // navbar.setAttribute('style', 'height:7rem; opacity: 1;background-color:transparent;');
@@ -108,7 +108,8 @@ window.addEventListener('scroll', (e) => {
             navbar.setAttribute('style', 'height:0px; opacity: 0;');
             toggleNavList.setAttribute('style', '');
 
-        } else if(true){
+        } else if(window.innerWidth < 765){
+            navbar.classList.add('toggled'); 
 
         }
 

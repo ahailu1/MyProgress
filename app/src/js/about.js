@@ -9,6 +9,8 @@ var aboutCardInformation = document.getElementsByClassName('section__about__card
 var aboutBody = document.getElementsByClassName('section__about')[0];
 var aboutTech = document.getElementsByClassName('section__about__container__description')[0];
 var aboutTechWrapper = document.getElementsByClassName('technology__language__wrapper')[0];
+var aboutTechHeader = document.getElementsByClassName('technology__header')[0];
+
 var scrollPos = 0;
 var secondScrollPos = 0;
 var thirdScrollPos = 0;
@@ -20,9 +22,12 @@ var calcDistance = function(element){
     let elHeight = element.getBoundingClientRect().height;
     let elTop = element.getBoundingClientRect().top;
     let val = (((pageHeight - elTop) / elHeight) * 100) - 10;
-    val = val > 100 ? 100 : val;
-    return val;
-}
+    let valNumber = val > 90 ? 100 : val;
+    console.log(valNumber + 'is ur vallll');
+
+    return valNumber;
+
+}   
 window.addEventListener('scroll', () => {
     var cardRect = aboutCard[0].getBoundingClientRect();
 var cardRectTwo = aboutCard[1].getBoundingClientRect();
@@ -58,7 +63,7 @@ hello.hello();
             if(aboutContainer.getBoundingClientRect().top > 0){
                 scrollPos = documentBody;
                 aboutContainer.classList.remove('toggled');
-                aboutContainerHeight.setAttribute('style', `height:${distance}%;background-color:#1d1d20; color: white;`);
+                aboutContainerHeight.setAttribute('style', `height:${distance}%;background-color:#1d1d20;`);
     
             }    
         }
@@ -103,7 +108,7 @@ hello.hello();
         } else {
             if(topCardTwo > 0){
                 aboutIcon[1].setAttribute('style', 'color: whitesmoke');
-            aboutCardInformationChildrenTwo[1].style.color = "whitesmoke";
+            aboutCardInformationChildrenTwo[0].style.color = "whitesmoke";
 
                 aboutCardSpan[1].setAttribute('style', `height:${cardDistanceTwo}%;background-color:#1d1d20; color: white;`);
                 thirdScrollPos = documentBody;
@@ -114,21 +119,18 @@ hello.hello();
 
     if(aboutTechTop < pageHeight){
         if(documentBody > fourthScrollPos){
-            aboutTech.classList.add('toggled');
-            aboutTechWrapper.setAttribute('style', `height:0;opacity:0;`);
-            aboutIcon[0].setAttribute('style', '');
-            aboutCardInformationChildrenTwo[0].setAttribute('style', "color:#1d1d20");
-
+            aboutTechWrapper.setAttribute('style', `height:0px;opacity:1;`);
             fourthScrollPos = documentBody;
-        } else {
-            if(aboutTechTop > 0){
-                aboutTech.classList.remove('toggled');
-                aboutCardInformationChildrenTwo[0].setAttribute('style', "color: whitesmoke");
-                aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
-                aboutIcon[1].setAttribute('style', 'color: whitesmoke');
+            aboutTechHeader.style.color = "#1d1d20";
 
+        } else {
+            if(aboutTech.getBoundingClientRect().bottom > 0){
+                techDistance > 85 ? 100 : techDistance;
+                console.log(techDistance + 'this is my techdistance');
+                aboutTechHeader.style.color = "whitesmoke";
+                aboutCardInformationChildrenTwo[0].setAttribute('style', "color: whitesmoke;");
+                aboutTechWrapper.setAttribute('style', `height:${techDistance}%;background-color: #1d1d20;`);
                     fourthScrollPos = documentBody;
-        
             }
         }
     }
