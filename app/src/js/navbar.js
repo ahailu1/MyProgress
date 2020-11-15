@@ -97,7 +97,7 @@ window.addEventListener('scroll', (e) => {
     }
 
         console.log(scrollInit + 'scroll init');
-        if(window.scrollY > 0 &&  window.scrollY <= homepageBottom){
+        if(window.scrollY > 0 &&  0 > homepageBottom){
             scrollInit = documentBodyInit;
             console.log('up');
            // navbar.setAttribute('style', 'height:7rem; opacity: 1;background-color:transparent;');
@@ -120,9 +120,6 @@ window.addEventListener('scroll', (e) => {
         navbar.setAttribute('style', 'height:0px; opacity: 1;');
 
     } else {
-        navbar.classList.add('toggled');
-        console.log('down');
-        navbar.setAttribute('style', 'display:flex;height:4rem;');
 
     }        
     

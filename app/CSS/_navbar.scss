@@ -6,9 +6,7 @@
 
     @media(min-width: 320px){
         width: 3rem;
-        background-color: white;
         height: 0.35rem;
-        border: solid white;
         border-radius: 0.25rem;
         //margin: 0.35rem 0 0rem 0;
         display: flex;
@@ -129,7 +127,6 @@
             width: 100%;
             background-color: #1d1d20;
             font-size: 1.35rem;
-            box-shadow: 0 0 3px 0 #1d1d20;
         }
         @media(min-width:768px){
             display: flex;

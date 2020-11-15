@@ -239,6 +239,9 @@
                 font-size: 3.5rem;
                 border-bottom: solid #ffffd1 8px;
             }
+        &:hover{
+            font-size: inherit;
+        }
         }
         &__line{
             display: flex;

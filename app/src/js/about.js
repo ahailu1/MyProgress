@@ -12,6 +12,7 @@ var aboutTechWrapper = document.getElementsByClassName('technology__language__wr
 var scrollPos = 0;
 var secondScrollPos = 0;
 var thirdScrollPos = 0;
+var aboutIcon = document.getElementsByClassName('about__icon');
 var fourthScrollPos = 0;
 //technology toggle
 var technologyContainer = document.getElementsByClassName('technology__language');
@@ -41,7 +42,7 @@ hello.hello();
     var documentBody = document.body.getBoundingClientRect().top;
     var distance = calcDistance(aboutContainer);
     var cardDistance = calcDistance(aboutCard[0]);
-    var cardDistanceTwo = calcDistance(aboutCard[0]);
+    var cardDistanceTwo = calcDistance(aboutCard[1]);
 
     if(itemTop < pageHeight){
         //aboutContainer.setAttribute('style', `border: solid red; transition: all ease-in 0.5s`);
@@ -66,12 +67,21 @@ hello.hello();
     if(topCard < pageHeight){
         if(documentBody > secondScrollPos){
             aboutCardSpan[0].setAttribute('style', `height:0;opacity:0;`);
-            aboutCard[0].classList.add('toggled');
+            aboutCardInformationChildren[0].setAttribute('style', '');
+            aboutCardInformationChildren[1].setAttribute('style', '');
+            aboutCardInformationChildren[2].setAttribute('style', '');
+            aboutIcon[0].setAttribute('style', '');
+            aboutCard[0].classList.add('one');
             secondScrollPos = documentBody;
         } else {
             if(topCard > 0){
-                aboutCardSpan[0].setAttribute('style', `height:${cardDistance}%;background-color:whitesmoke; color: white;`);
-                aboutCard[0].classList.remove('toggled');
+                aboutCardSpan[0].setAttribute('style', `height:${cardDistance}%;background-color:whitesmoke; color: white;z-index: -5;`);
+                //aboutCard[0].classList.remove('one');
+                aboutCardInformationChildren[0].setAttribute('style', 'color:#1d1d20;');
+                aboutCardInformationChildren[1].setAttribute('style', 'color:#1d1d20;');
+                aboutCardInformationChildren[2].setAttribute('style', 'color:#1d1d20;');
+                aboutIcon[0].setAttribute('style', 'color: #1d1d20');
+
                 secondScrollPos = documentBody;
     
             }
@@ -82,35 +92,41 @@ hello.hello();
     if(topCardTwo < pageHeight){
 
         if(documentBody > thirdScrollPos){
-            //aboutCardInformationChildrenTwo[0].style.color = "#1d1d20";
+            aboutCardInformationChildrenTwo[0].style.color = "#1d1d20";
             //aboutCardInformationChildrenTwo[1].style.color = "#1d1d20";
             aboutCardSpan[1].setAttribute('style', `height:0;`);
             thirdScrollPos = documentBody;
-            aboutCard[1].classList.remove('toggled');
+            aboutCard[1].classList.add('two');
+            aboutIcon[1].setAttribute('style', 'color: #1d1d20');
 
             //aboutCard[0].classList.remove('toggled');
         } else {
             if(topCardTwo > 0){
+                aboutIcon[1].setAttribute('style', 'color: whitesmoke');
+            aboutCardInformationChildrenTwo[1].style.color = "whitesmoke";
+
                 aboutCardSpan[1].setAttribute('style', `height:${cardDistanceTwo}%;background-color:#1d1d20; color: white;`);
                 thirdScrollPos = documentBody;
-                aboutCard[1].classList.add('toggled');
-                console.log(aboutCard[1].getBoundingClientRect().top + 'this tha top');
     
             }
         }
     }
 
     if(aboutTechTop < pageHeight){
-            console.log([aboutTechTop, aboutTechWrapper, aboutTechHeight])
-        aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
         if(documentBody > fourthScrollPos){
             aboutTech.classList.add('toggled');
             aboutTechWrapper.setAttribute('style', `height:0;opacity:0;`);
+            aboutIcon[0].setAttribute('style', '');
+            aboutCardInformationChildrenTwo[0].setAttribute('style', "color:#1d1d20");
+
             fourthScrollPos = documentBody;
         } else {
             if(aboutTechTop > 0){
                 aboutTech.classList.remove('toggled');
+                aboutCardInformationChildrenTwo[0].setAttribute('style', "color: whitesmoke");
                 aboutTechWrapper.setAttribute('style', `height:${techDistance}%;`);
+                aboutIcon[1].setAttribute('style', 'color: whitesmoke');
+
                     fourthScrollPos = documentBody;
         
             }
