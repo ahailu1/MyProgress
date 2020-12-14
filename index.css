@@ -1285,7 +1285,7 @@
   transition: all ease-in-out 1s;
 }
 .technology__language__relative.csharp {
-  width: 10%;
+  width: 50%;
   animation: progressbar ease-in-out 4s;
   transition: all ease-in-out 1s;
 }
@@ -1314,7 +1314,7 @@
   content: "2 years";
 }
 .technology__language__relative.csharp::after {
-  content: "3 months";
+  content: " 1 year";
 }
 .technology__language__blur {
   position: absolute;

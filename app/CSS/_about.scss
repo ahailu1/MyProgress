@@ -426,7 +426,7 @@ text-align: center;
             transition: all ease-in-out 1s;
         }
         &.csharp{
-            width: 20%;
+            width: 50%;
             animation: progressbar ease-in-out 4s;
             transition: all ease-in-out 1s;
 
@@ -458,7 +458,7 @@ text-align: center;
         content: "2 years";
     }
     &.csharp::after{
-        content: "6 months";
+        content: " 1 year";
     }
 }
     &__blur{
